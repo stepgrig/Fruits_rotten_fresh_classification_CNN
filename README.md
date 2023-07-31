@@ -67,3 +67,6 @@ Precission this is ability of classifier not to label sample positive the is neg
 
 
 ![Screenshot (39)](https://github.com/stepgrig/Fruits_rotten_fresh_classification_CNN/assets/103223897/96978e6c-a158-467b-94a8-79e14cdb2578)
+
+
+By deploying such a CNN model in supermarkets, we can automate the quality control process for fruits, improving efficiency, reducing costs, and enhancing the overall customer experience. Our journey into this project thus far has shown promising results, and we are excited about its potential impact on the supermarket industry.
