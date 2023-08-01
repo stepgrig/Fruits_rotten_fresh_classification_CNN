@@ -5,6 +5,12 @@ Data landscape of our project aimed at transforming food quality control. We are
 To ensure a systematic approach, this rich dataset has been organized into two primary folders - 'Train' and 'Test'. The 'Train' folder, as the name suggests, is used to train our model, and contains a diverse mix of 10,451 .png images. These are further divided across six categories: rotten oranges, rotten bananas, rotten apples, fresh oranges, fresh bananas, and fresh apples. <br>
 We have set aside a portion of these images for training and validation purposes. A total of 8,723 images forms the corpus of our training data. This data is used to teach our model the intricate differences between fresh and rotten fruits. Simultaneously, we used 2,178 images for validation purposes. These images serve as validation for the trained model, allowing us to verify its accuracy and fine-tune it for optimal performance. <br>
 In essence, this selected and organized data forms the foundation of our project. It equips our model with the 'eye' that separates fresh produce from the rotten and promises quality control processes across food businesses. <br>
+
+Saved model link google drive https://drive.google.com/drive/u/0/folders/1PC0jPof3cCMzToCQPbkfTx8UY-iZZp2I
+
+Data in google drive link
+https://drive.google.com/drive/u/0/folders/1pLcOZEOVidw6rABt2ahQWfZzc6aWRk0h
+
 # Business Problem
 In today's fast-paced world, supermarkets and grocery stores play a crucial role in feeding cities and towns across the globe. However, they face numerous challenges in their daily operations, one of which is ensuring the freshness and quality of the food they sell, especially perishable items like fruits and vegetables.
 The classification of food as fresh or rotten is a vital aspect for supermarkets for several reasons:
