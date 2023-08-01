@@ -52,6 +52,31 @@ Pooling layers further help to reduce the dimensionality, thereby increasing the
 After several iterations of these operations, the model then employs fully connected, or dense, layers to translate the filtered and reduced features into final classification probabilities. The data at this stage is flattened into a one-dimensional array and passed through a Softmax activation function to output the likelihood of each class.
 
 The training process involves fine-tuning the filter values and weights in the neural network to minimize the difference between the model's predictions and the actual labels in the training data. This is achieved through a method called backpropagation, where the model learns from its errors by adjusting its weights in the direction that reduces the loss, using a technique known as gradient descent.
+
+# Final Model
+
+This model is a Convolutional Neural Network (CNN) composed of several layers including Convolutional layers, Pooling layers, Dense layers, and an Output layer.
+Model Creation: Sequential() is used to initialize a linear stack of layers in your model. The model is called baseline3.
+
+First Convolutional Layer: Conv2D(32, (3, 3), activation='relu', input_shape=(256, 256, 3)) adds a 2D convolution layer to the model with 32 filters, each of which has a size of 3x3. The activation function 'relu' (Rectified Linear Unit) is used to introduce non-linearity to the model. The input_shape=(256, 256, 3) specifies the dimensions of the input image, 256x256 pixels with 3 channels (RGB).
+
+Batch Normalization Layer: BatchNormalization() normalizes the activations of the previous layer at each batch, i.e. applies a transformation that maintains the mean activation close to 0 and the activation standard deviation close to 1.
+
+First Pooling Layer: MaxPooling2D((2, 2)) performs max pooling operation for spatial data. The window size for the pooling operation is 2x2. This reduces the dimensionality of each feature map while retaining important information.
+
+Second and Third Convolutional Layers: These layers are similar to the first one but with more filters (64 and 128 respectively), meaning the network can learn more complex representations. Here, we also introduce kernel_regularizer = reg, which applies L2 regularization to the weights of these layers, helping to prevent overfitting.
+
+Flattening Layer: Flatten() is used to flatten the multi-dimensional tensor into a 1D tensor (vector), so it can be fed into the following fully connected layers (Dense layers).
+
+Dense Layers: Dense(128, activation='relu', kernel_regularizer = reg) and Dense(64, activation='relu', kernel_regularizer = reg) are fully connected layers with 128 and 64 neurons respectively. The 'relu' activation function is used for introducing non-linearity. Here again, L2 regularization is used to prevent overfitting.
+
+Dropout Layer: Dropout(0.5) randomly sets 50% of the input units to 0 at each update during training time, which helps prevent overfitting.
+
+Output Layer: Dense(6, activation='softmax') is the final layer, which outputs the distribution of probabilities for each of the 6 classes. The 'softmax' activation function ensures that all the probabilities sum to 1.  
+
+**Test Accuracy: 97 %**
+
+
 # Model Performance
 
 ![1](https://github.com/stepgrig/Fruits_rotten_fresh_classification_CNN/assets/103223897/563d417a-15d2-482e-8371-eb29abbd1c6f)
